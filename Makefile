@@ -4,4 +4,4 @@ build:
 	go build -o $(BIN)
 
 clean:
-	-rm -f $(BIN)
+	-rm -f $(BIN) *.db
