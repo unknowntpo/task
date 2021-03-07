@@ -66,7 +66,7 @@ func newDoCmd() *cobra.Command {
 
 // Init inits an root command and add all commands in cmd pkg.
 // return error if it exist
-func Init() error {
+func Init() (*cobra.Command, error) {
 	rootCmd := newRootCmd()
 	listCmd := newListCmd()
 	addCmd := newAddCmd()
@@ -78,5 +78,5 @@ func Init() error {
 
 	rootCmd.Execute()
 
-	return nil
+	return rootCmd, nil
 }

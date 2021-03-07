@@ -13,7 +13,7 @@ func main() {
 		fmt.Errorf("Failed to init database: %v", err)
 	}
 
-	err = cmd.Init()
+	_, err = cmd.Init()
 	if err != nil {
 		fmt.Errorf("Failed to init cmd package: %v", err)
 	}
