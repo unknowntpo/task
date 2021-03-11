@@ -31,7 +31,7 @@ func newAddCmd() *cobra.Command {
 				return
 			}
 
-			fmt.Printf("Add \"%s\" to your task list.\n", task)
+			fmt.Fprintf(cmd.OutOrStdout(), "Add \"%s\" to your task list.\n", task)
 		},
 	}
 }
